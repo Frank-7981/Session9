@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 15</title>
+</head>
+
+<body>
+    <script>
+        const inputString = prompt("Nhập chuỗi ngăn cách bởi dấu cách:");
+        let outputString = '';
+
+        let isUpperCase = false;
+
+        for (let i = 0; i < inputString.length; i++) {
+            const char = inputString[i];
+
+            if (char >= 'A' && char <= 'Z') {
+                // Nếu gặp chữ hoa, chuyển thành chữ thường và đặt isUpperCase thành true
+                outputString += char.toLowerCase();
+                isUpperCase = true;
+            } else if (char >= 'a' && char <= 'z') {
+                // Nếu gặp chữ thường, chuyển thành chữ hoa và đặt isUpperCase thành true
+                outputString += char.toUpperCase();
+                isUpperCase = true;
+            } else if (char === ' ') {
+                // Nếu gặp dấu cách, đặt isUpperCase thành false để chuyển đổi ký tự tiếp theo
+                outputString += char;
+                isUpperCase = false;
+            } else {
+                // Nếu gặp ký tự đặc biệt, giữ nguyên và đặt isUpperCase thành false
+                outputString += char;
+                isUpperCase = false;
+            }
+        }
+        console.log("Chuỗi sau khi chuyển đổi: " + outputString);
+    </script>
+</body>
+
+</html>

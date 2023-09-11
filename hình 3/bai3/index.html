@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 13</title>
+</head>
+
+<body>
+    <script>
+        const inputString = prompt("Nhập một chuỗi:").toLowerCase(); // Chuyển đổi chuỗi thành chữ thường
+        const charArray = inputString.split('');
+
+        // Tạo một bản sao đảo ngược của mảng
+        const reversedArray = [...charArray].reverse();
+
+        // So sánh mảng ban đầu với mảng đảo ngược
+        let isPalindrome = true;
+        for (let i = 0; i < charArray.length; i++) {
+            if (charArray[i] !== reversedArray[i]) {
+                isPalindrome = false; // Không đối xứng
+                break; // Dừng vòng lặp nếu không đối xứng
+            }
+        }
+
+        if (isPalindrome) {
+            console.log("Chuỗi là đối xứng.");
+        } else {
+            console.log("Chuỗi không đối xứng.");
+        }
+
+    </script>
+</body>
+
+</html>

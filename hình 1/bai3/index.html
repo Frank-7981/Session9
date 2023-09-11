@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 3</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        for (let i = 0; i < 5; i++) {
+            let input = +prompt("hay nhap so nguyen: ");
+            arr.push(input);
+        }
+        let max = 0;
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        for (const a of arr) {
+            sum += a;
+        }
+        const avg = sum / arr.length;
+
+        console.log("Mảng đã nhập là: " + arr.join(", "));
+        console.log("Giá trị lớn nhất trong mảng là: " + max);
+        console.log(" GTTB : " + avg)
+    </script>
+</body>
+
+</html>

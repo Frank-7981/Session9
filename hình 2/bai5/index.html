@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 10</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt(" hãy nhập 1 chuỗi ký tự ngăn cách bởi dấu phẩy:");
+        let arr = input.split(",");
+        let replaced = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "-") {
+                replaced.push("_");
+            } else {
+                replaced.push(arr[i]);
+            }
+        }
+        console.log("chuỗi mới được thay thế là:" + replaced.join(","));
+    </script>
+</body>
+
+</html>
